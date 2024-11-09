@@ -6,8 +6,22 @@
         xmlns:local="clr-namespace:да"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
     <Grid>
-        <Button Content="Далее" HorizontalAlignment="Left" VerticalAlignment="Top" Width="253" Margin="256,128,0,0" Height="168" RenderTransformOrigin="0.5,0.5" Click="Button_Click">
+        <Menu Height="25" VerticalAlignment="Top">
+            <MenuItem Header="Файл" Height="25">
+                <MenuItem.Icon>
+                    <Image Source="\\sysprofiles.adm.vvsu.ru\STUDENTRPROFILES$\kirilkaurd2\Desktop\1.jpg"></Image>
+                </MenuItem.Icon>
+                <MenuItem Header="Открыть">
+                    <MenuItem Header="Файл 1" Click="MenuItem_Click_1"></MenuItem>
+                    <MenuItem Header="Файл 2" Click="MenuItem_Click_2"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Сохранить"></MenuItem>
+                <MenuItem Header="Выйти" Click="MenuItem_Click"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <Button Content="Далее" HorizontalAlignment="Left" VerticalAlignment="Top" Width="114" Margin="567,332,0,0" Height="62" RenderTransformOrigin="0.5,0.5" Click="Button_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -17,6 +31,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
+        <Image Name="DisplayImage" HorizontalAlignment="Left" Height="169" Margin="116,128,0,0" VerticalAlignment="Top" Width="202"/>
 
     </Grid>
 </Window>

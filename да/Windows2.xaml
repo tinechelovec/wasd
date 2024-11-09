@@ -8,6 +8,7 @@
         Title="Windows2" Height="450" Width="800">
     <Grid>
         <Button Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="315" Margin="230,136,0,0" Height="149" Click="Button_Click"/>
+        <Image Name="DisplayImage" HorizontalAlignment="Left" Height="100"></Image>
 
     </Grid>
 </Window>
