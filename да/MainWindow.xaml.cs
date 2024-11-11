@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Win32;
 
 namespace да
 {
@@ -20,8 +21,6 @@ namespace да
     /// </summary>
     public partial class MainWindow : Window
     {
-        private string image1 = @"\\sysprofiles.adm.vvsu.ru\STUDENTRPROFILES$\kirilkaurd2\Desktop\2.png";
-        private string image2 = @"\\sysprofiles.adm.vvsu.ru\STUDENTRPROFILES$\kirilkaurd2\Desktop\3.jpg";
         public MainWindow()
         {
             InitializeComponent();
@@ -42,12 +41,12 @@ namespace да
 
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
-            DisplayImage.Source = new BitmapImage(new Uri(image1));
-        }
-
-        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
-        {
-            DisplayImage.Source = new BitmapImage(new Uri(image2));
+            OpenFileDialog openFileDialog = new OpenFileDialog { Filter = "Image Files| *.jpg; *.jpeg; *.png; *.gif; *.bmp; *.webm;" };
+            if(openFileDialog.ShowDialog() == true)
+            {
+                BitmapImage bitmapImage = new BitmapImage(new Uri(openFileDialog.FileName));
+                DisplayImage.Source = bitmapImage;
+            }
         }
     }
 }

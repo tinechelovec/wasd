@@ -13,10 +13,7 @@
                 <MenuItem.Icon>
                     <Image Source="\\sysprofiles.adm.vvsu.ru\STUDENTRPROFILES$\kirilkaurd2\Desktop\1.jpg"></Image>
                 </MenuItem.Icon>
-                <MenuItem Header="Открыть">
-                    <MenuItem Header="Файл 1" Click="MenuItem_Click_1"></MenuItem>
-                    <MenuItem Header="Файл 2" Click="MenuItem_Click_2"></MenuItem>
-                </MenuItem>
+                <MenuItem Header="Открыть" Click="MenuItem_Click_1"></MenuItem>
                 <MenuItem Header="Сохранить"></MenuItem>
                 <MenuItem Header="Выйти" Click="MenuItem_Click"></MenuItem>
             </MenuItem>
@@ -31,7 +28,16 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Image Name="DisplayImage" HorizontalAlignment="Left" Height="169" Margin="116,128,0,0" VerticalAlignment="Top" Width="202"/>
+        <Image Name="DisplayImage" HorizontalAlignment="Left" Height="116" Margin="89,36,0,0" VerticalAlignment="Top" Width="333" RenderTransformOrigin="0.499,0.434">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="359.233"/>
+                    <TranslateTransform X="-0.132" Y="0.01"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
 
     </Grid>
 </Window>
