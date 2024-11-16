@@ -5,13 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:да"
         mc:Ignorable="d"
-        Title="Windows2" Height="450" Width="800">
+        Title="Calc" Height="450" Width="300">
     <Grid>
-        <Button Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="315" Margin="230,136,0,0" Height="149" Click="Button_Click"/>
-        <Image Name="DisplayImage" HorizontalAlignment="Left" Height="100"></Image>
-        <TextBox HorizontalAlignment="Left" Height="71" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="197"/>
-        <TextBlock Name="tbox1" HorizontalAlignment="Left" Margin="207,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="68" Width="212"/>
-        <PasswordBox HorizontalAlignment="Left" Margin="419,10,0,0" VerticalAlignment="Top" Height="71" Width="212"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="96,162,0,0" VerticalAlignment="Top" Width="111" Click="Button_Click_2" Height="123"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBox Name="txtDisplay" Grid.Row="0" Margin="10" FontSize="24" TextAlignment="Right" IsReadOnly="True"/>
+            <Grid Grid.Row="1" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Name="btn7" Content="7" Grid.Row="1" Grid.Column="0" Background="Aqua"/>
+                <Button Name="btn8" Content="8" Grid.Row="1" Grid.Column="1" Background="LightPink"/>
+                <Button Name="btn9" Content="9" Grid.Row="1" Grid.Column="2" Background="Aquamarine"/>
+                <Button Name="btn4" Content="4" Grid.Row="2" Grid.Column="0" Background="Violet"/>
+                <Button Name="btn5" Content="5" Grid.Row="2" Grid.Column="1" Background="DarkOrange"/>
+                <Button Name="btn6" Content="6" Grid.Row="2" Grid.Column="2" Background="Purple"/>
+                <Button Name="btn1" Content="1" Grid.Row="3" Grid.Column="0" Background="BlueViolet"/>
+                <Button Name="btn2" Content="2" Grid.Row="3" Grid.Column="1" Background="Chocolate"/>
+                <Button Name="btn3" Content="3" Grid.Row="3" Grid.Column="2" Background="Crimson"/>
+                <Button Name="btn0" Content="0" Grid.Row="4" Grid.ColumnSpan="2" Grid.Column="1" Background="DarkCyan"/>
+                <Button Name="btnDiv" Content="/" Grid.Row="0" Grid.Column="1" Background="Green"/>
+                <Button Name="btnMult" Content="*" Grid.Row="0" Grid.Column="2" Background="DarkSlateBlue"/>
+                <Button Name="btnMin" Content="-" Grid.Row="0" Grid.Column="3" Background="Silver"/>
+                <Button Name="btnPlus" Content="+" Grid.Row="1" Grid.RowSpan="2" Grid.Column="3" Background="HotPink"/>
+                <Button Name="btnResult" Content="=" Grid.Row="3" Grid.RowSpan="4" Grid.Column="3" Background="Goldenrod"/>
+                <Button Name="btnClear" Content="C" Grid.Row="0" Grid.Column="0" Background="LightGoldenrodYellow"/>
+                <Button Name="btnDec" Content="." Grid.Row="4" Grid.Column="0" Background="SlateBlue"/>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>
