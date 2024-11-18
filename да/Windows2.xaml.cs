@@ -21,20 +21,68 @@ namespace да
     /// </summary>
     public partial class Windows2 : Window
     {
+        private double _currentValue = 0;
+        private double _storedValue = 0;
+            private char _operation = ' ';
         public Windows2()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void NumberButton_click(object sender, RoutedEventArgs e)
         {
-            MainWindow window = new MainWindow();
-            window.Show();
-            this.Close();
+            Button button = (Button)sender;
+            string number = button.Content.ToString();
+            if (txtDisplay.Text == "0" && number!= ".")
+            {
+                txtDisplay.Text = number;
+            }
+            else
+            {
+                txtDisplay.Text += number;
+            }
         }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void OperationButton_click(object sender, RoutedEventArgs e)
         {
+            Button button = (Button)sender;
+            _operation = button.Content.ToString()[0];
+            _storedValue = double.Parse(txtDisplay.Text);
+            txtDisplay.Text = "0";
+        }
+        private void EqualsButton_Click(object sender, RoutedEventArgs e)
+        {
+            _currentValue = double.Parse(txtDisplay.Text);
+            switch (_operation)
+            {
+                case '+':
+                    _currentValue = _storedValue + _currentValue;
+                    break;
+                case '-':
+                    _currentValue = _storedValue - _currentValue;
+                    break;
+                case '*':
+                    _currentValue = _storedValue * _currentValue;
+                    break;
+                case '/':
+                    if (_storedValue < 0)
+                    {
+                        _currentValue = _storedValue / _currentValue;
+                    }
+                    else
+                    {
+                        MessageBox.Show("ошибка");
+                    }
+                    break;
+            }
+            txtDisplay.Text = _currentValue.ToString();
+            _currentValue = '\0';
+        }
+        private void ClearButton_click (object sender, RoutedEventArgs e)
+        {
+            txtDisplay.Text = "0";
+            _currentValue = 0;
+            _storedValue = 0;
+            _operation = '\0';
         }
     }
 }

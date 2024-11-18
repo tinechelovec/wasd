@@ -27,23 +27,23 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button Name="btn7" Content="7" Grid.Row="1" Grid.Column="0" Background="Aqua"/>
-                <Button Name="btn8" Content="8" Grid.Row="1" Grid.Column="1" Background="LightPink"/>
-                <Button Name="btn9" Content="9" Grid.Row="1" Grid.Column="2" Background="Aquamarine"/>
-                <Button Name="btn4" Content="4" Grid.Row="2" Grid.Column="0" Background="Violet"/>
-                <Button Name="btn5" Content="5" Grid.Row="2" Grid.Column="1" Background="DarkOrange"/>
-                <Button Name="btn6" Content="6" Grid.Row="2" Grid.Column="2" Background="Purple"/>
-                <Button Name="btn1" Content="1" Grid.Row="3" Grid.Column="0" Background="BlueViolet"/>
-                <Button Name="btn2" Content="2" Grid.Row="3" Grid.Column="1" Background="Chocolate"/>
-                <Button Name="btn3" Content="3" Grid.Row="3" Grid.Column="2" Background="Crimson"/>
-                <Button Name="btn0" Content="0" Grid.Row="4" Grid.ColumnSpan="2" Grid.Column="1" Background="DarkCyan"/>
-                <Button Name="btnDiv" Content="/" Grid.Row="0" Grid.Column="1" Background="Green"/>
-                <Button Name="btnMult" Content="*" Grid.Row="0" Grid.Column="2" Background="DarkSlateBlue"/>
-                <Button Name="btnMin" Content="-" Grid.Row="0" Grid.Column="3" Background="Silver"/>
-                <Button Name="btnPlus" Content="+" Grid.Row="1" Grid.RowSpan="2" Grid.Column="3" Background="HotPink"/>
-                <Button Name="btnResult" Content="=" Grid.Row="3" Grid.RowSpan="4" Grid.Column="3" Background="Goldenrod"/>
-                <Button Name="btnClear" Content="C" Grid.Row="0" Grid.Column="0" Background="LightGoldenrodYellow"/>
-                <Button Name="btnDec" Content="." Grid.Row="4" Grid.Column="0" Background="SlateBlue"/>
+                <Button Name="btn7" Content="7" Grid.Row="1" Grid.Column="0" Background="Aqua" Click="NumberButton_click"/>
+                <Button Name="btn8" Content="8" Grid.Row="1" Grid.Column="1" Background="LightPink" Click="NumberButton_click"/>
+                <Button Name="btn9" Content="9" Grid.Row="1" Grid.Column="2" Background="Aquamarine" Click="NumberButton_click"/>
+                <Button Name="btn4" Content="4" Grid.Row="2" Grid.Column="0" Background="Violet" Click="NumberButton_click"/>
+                <Button Name="btn5" Content="5" Grid.Row="2" Grid.Column="1" Background="DarkOrange" Click="NumberButton_click"/>
+                <Button Name="btn6" Content="6" Grid.Row="2" Grid.Column="2" Background="Purple" Click="NumberButton_click"/>
+                <Button Name="btn1" Content="1" Grid.Row="3" Grid.Column="0" Background="BlueViolet" Click="NumberButton_click"/>
+                <Button Name="btn2" Content="2" Grid.Row="3" Grid.Column="1" Background="Chocolate" Click="NumberButton_click"/>
+                <Button Name="btn3" Content="3" Grid.Row="3" Grid.Column="2" Background="Crimson" Click="NumberButton_click"/>
+                <Button Name="btn0" Content="0" Grid.Row="4" Grid.ColumnSpan="2" Grid.Column="1" Background="DarkCyan" Click="NumberButton_click"/>
+                <Button Name="btnDiv" Content="/" Grid.Row="0" Grid.Column="1" Background="Green" Click="OperationButton_click"/>
+                <Button Name="btnMult" Content="*" Grid.Row="0" Grid.Column="2" Background="DarkSlateBlue" Click="OperationButton_click"/>
+                <Button Name="btnMin" Content="-" Grid.Row="0" Grid.Column="3" Background="Silver" Click="OperationButton_click"/>
+                <Button Name="btnPlus" Content="+" Grid.Row="1" Grid.RowSpan="2" Grid.Column="3" Background="HotPink" Click="OperationButton_click"/>
+                <Button Name="btnResult" Content="=" Grid.Row="3" Grid.RowSpan="4" Grid.Column="3" Background="Goldenrod" Click="EqualsButton_Click"/>
+                <Button Name="btnClear" Content="C" Grid.Row="0" Grid.Column="0" Background="LightGoldenrodYellow" Click="ClearButton_click"/>
+                <Button Name="btnDec" Content="." Grid.Row="4" Grid.Column="0" Background="SlateBlue" Click="NumberButton_click"/>
             </Grid>
         </Grid>
     </Grid>
