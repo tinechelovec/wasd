@@ -1,0 +1,33 @@
+﻿<Window x:Class="да.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:да"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+        <TextBlock Text="что идет после 1?"></TextBlock>
+        <RadioButton Name="radioBtn" GroupName="Test1" Content="52"/>
+            <RadioButton Name="radioBtn2" GroupName="Test1" Content="1337"/>
+            <RadioButton Name="radioBtn3" GroupName="Test1" Content="2"/>
+            <Separator/>
+        <TextBlock Text="гараж какого цвета?"></TextBlock>
+                <RadioButton Name="radioBtn4" GroupName="Test2" Content="красивого"/>
+                <RadioButton Name="radioBtn6" GroupName="Test2" Content="крутого"/>
+                <RadioButton Name="radioBtn7" GroupName="Test2" Content="зеленый (не слоник)"/>
+            <Separator/>
+        <TextBlock Text="да?"></TextBlock>
+            <RadioButton Name="radioBtn8" GroupName="Test3" Content="да"/>
+            <RadioButton Name="radioBtn9" GroupName="Test3" Content="нет"/>
+            <RadioButton Name="radioBtn10" GroupName="Test3" Content="кто создал это?"/>
+            <Separator/>
+            <TextBlock Text="молодежная столица?"></TextBlock>
+            <RadioButton Name="radioBtn11" GroupName="Test4" Content="чебоксары"/>
+            <RadioButton Name="radioBtn12" GroupName="Test4" Content="Крунг-Тхеп-Маха-Накхон"/>
+            <RadioButton Name="radioBtn13" GroupName="Test4" Content="ну может быть владивосток"/>
+            <Button Content="Проверка" Click="Button_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Window>
