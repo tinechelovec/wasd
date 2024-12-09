@@ -48,5 +48,12 @@ namespace да
                 DisplayImage.Source = bitmapImage;
             }
         }
+
+        private void Button_Click_pop(object sender, RoutedEventArgs e)
+        {
+            Window2 window = new Window2();
+            window.Show();
+            this.Close();
+        }
     }
 }

@@ -38,6 +38,16 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
+        <Button Content="pop" HorizontalAlignment="Left" VerticalAlignment="Top" Width="114" Margin="567,192,0,0" Height="62" RenderTransformOrigin="0.5,0.5" Click="Button_Click_pop">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="3.251"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-7.015"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
         <Image Name="DisplayImage" HorizontalAlignment="Left" Height="116" Margin="89,36,0,0" VerticalAlignment="Top" Width="333" RenderTransformOrigin="0.499,0.434">
             <Image.RenderTransform>
                 <TransformGroup>
